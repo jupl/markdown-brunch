@@ -7,11 +7,10 @@ module.exports = class MarkdownCompiler
   extension: 'md'
   pattern: /(\.(markdown|mdown|mkdn|md|mkd|mdwn|mdtxt|mdtext|text))$/
 
-  constructor: (@config) ->
-
   compile: (data, path, callback) ->
     try
-      result = "module.exports = function() { return \"#{markdown.toHTML data}\"; };";
+      html = markdown.toHTML data
+      result = "module.exports = function() { return #{JSON.stringify html}; };";
     catch err
       error = err
     finally
