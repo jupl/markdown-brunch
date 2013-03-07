@@ -1,5 +1,6 @@
 ## markdown-brunch
 Compiles Markdown files to HTML in [brunch](http://brunch.io). Plugin checks for files that have one of the following extensions:
+
 - .markdown
 - .mdown
 - .mkdn
@@ -9,6 +10,8 @@ Compiles Markdown files to HTML in [brunch](http://brunch.io). Plugin checks for
 - .mdtxt
 - .mdtext
 - .text
+
+It is important to note that this will only generate the necessary HTML. It is up to you to apply any additional CSS themes to make it more presentable.
 
 ## Usage
 Add `"markdown-brunch": "x.y.z"` to `package.json` of your brunch app.
