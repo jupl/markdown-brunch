@@ -1,5 +1,5 @@
 fs = require 'fs'
-{markdown} = require 'markdown'
+marked = require 'marked'
 
 module.exports = class MarkdownCompiler
   brunchPlugin: yes
@@ -9,8 +9,7 @@ module.exports = class MarkdownCompiler
 
   compile: (data, path, callback) ->
     try
-      html = markdown.toHTML data
-      result = "module.exports = function() { return #{JSON.stringify html}; };";
+      result = "module.exports = #{JSON.stringify marked(data)};";
     catch err
       error = err
     finally

@@ -1,5 +1,5 @@
 ## markdown-brunch
-Compiles Markdown files to HTML in [brunch](http://brunch.io). Plugin checks for files that have one of the following extensions:
+Compiles Markdown files to HTML in [brunch](http://brunch.io) using [Marked](https://github.com/chjj/marked). Plugin checks for files that have one of the following extensions:
 
 - .markdown
 - .mdown

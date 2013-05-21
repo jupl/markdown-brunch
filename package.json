@@ -1,6 +1,6 @@
 {
   "name": "markdown-brunch",
-  "version": "1.5.3",
+  "version": "1.6.0",
   "description": "Compiles Markdown files to HTML in brunch.",
   "author": "Juan Placencia",
   "homepage": "https://github.com/jupl/markdown-brunch",
@@ -20,7 +20,7 @@
   },
   "dependencies": {
     "coffee-script": "1.4.0",
-    "markdown": "0.4.0"
+    "marked": "0.2.x"
   },
   "devDependencies": {
     "mocha": "1.8.1",
