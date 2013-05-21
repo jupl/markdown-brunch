@@ -9,7 +9,7 @@ module.exports = class MarkdownCompiler
 
   compile: (data, path, callback) ->
     try
-      result = "module.exports = #{JSON.stringify marked(data)};";
+      result = "module.exports = function() { return #{JSON.stringify marked(data)}; }";
     catch err
       error = err
     finally

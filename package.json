@@ -1,6 +1,6 @@
 {
   "name": "markdown-brunch",
-  "version": "1.6.0",
+  "version": "1.6.1",
   "description": "Compiles Markdown files to HTML in brunch.",
   "author": "Juan Placencia",
   "homepage": "https://github.com/jupl/markdown-brunch",
