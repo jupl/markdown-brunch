@@ -11,13 +11,25 @@ Compiles Markdown files to HTML in [brunch](http://brunch.io) using [Marked](htt
 - .mdtext
 - .text
 
+It is important to note that this will only generate the necessary HTML. It is up to you to apply any additional CSS themes to make it more presentable.
+
+### Config
+Marked's default configuration options can be overridden using config. For example:
+
+```coffeescript
+marked:
+  gfm: false
+  smartypants: true
+```
+
+### Syntax Highlighting
 Code blocks by default do not get syntax highlighted.
 
     ```
     No syntax highlighting here.
     ```
 
-If a Hightlight-supported language is identified in the code block, it will get syntax highlighted.
+If a Highlight-supported language is identified in a fenced code block, it will get syntax highlighted.
 
     ```javascript
     function add(x, y) {
@@ -32,8 +44,6 @@ You can also use the `auto` identifier to use Highlight's language auto-detect f
       box-sizing: border-box;
     }
     ```
-
-It is important to note that this will only generate the necessary HTML. It is up to you to apply any additional CSS themes to make it more presentable.
 
 ## Usage
 Add `"markdown-brunch": "x.y.z"` to `package.json` of your brunch app.

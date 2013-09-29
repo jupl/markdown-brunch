@@ -8,14 +8,20 @@ module.exports = class MarkdownCompiler
   extension: 'md'
   pattern: /(\.(markdown|mdown|mkdn|md|mkd|mdwn|mdtxt|mdtext|text))$/
 
-  constructor: ->
+  constructor: (config) ->
     languages = Object.keys(hljs.LANGUAGES)
-    marked.setOptions
-      highlight: (code, lang) ->
+    options = Object.create(config.marked ? null)
+
+    # If highlight is defined in config then use default Highlight.js
+    unless 'highlight' of options
+      options.highlight = (code, lang) ->
         if lang is 'auto'
           hljs.highlightAuto(code).value
         else if languages.indexOf(lang) isnt -1
           hljs.highlight(lang, code).value
+
+    # Set marked options
+    marked.setOptions(options)
 
   compile: (data, path, callback) ->
     try
