@@ -12,7 +12,7 @@ module.exports = class MarkdownCompiler
     languages = Object.keys(hljs.LANGUAGES)
     options = Object.create(config.marked ? null)
 
-    # If highlight is defined in config then use default Highlight.js
+    # If highlight isn't defined in config then use default Highlight.js
     unless 'highlight' of options
       options.highlight = (code, lang) ->
         if lang is 'auto'
