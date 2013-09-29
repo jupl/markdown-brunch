@@ -1,6 +1,6 @@
 {
   "name": "markdown-brunch",
-  "version": "1.6.1",
+  "version": "1.7.0",
   "description": "Compiles Markdown files to HTML in brunch.",
   "author": "Juan Placencia",
   "homepage": "https://github.com/jupl/markdown-brunch",
@@ -10,20 +10,21 @@
   },
   "main": "./lib/index",
   "scripts": {
-    "prepublish": "node setup.js prepublish",
-    "postpublish": "node setup.js postpublish",
-    "test": "node setup.js test",
-    "postinstall": "node setup.js postinstall"
+    "prepublish": "rm -rf lib && coffee --bare --output lib/ src/",
+    "test": "node_modules/.bin/mocha"
   },
   "engines": {
     "node": "~0.6.10 || 0.8 || 0.9"
   },
   "dependencies": {
-    "coffee-script": "1.4.0",
-    "marked": "0.2.x"
+    "coffee-script": "~1.6.3",
+    "marked": "~0.2.9",
+    "highlight.js": "~7.3.0",
+    "umd-wrapper": "~0.1.0"
   },
   "devDependencies": {
-    "mocha": "1.8.1",
-    "chai": "1.4.2"
+    "mocha": "~1.13.0",
+    "chai": "~1.8.0",
+    "jsdom": "~0.8.6"
   }
 }
