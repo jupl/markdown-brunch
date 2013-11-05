@@ -17,13 +17,13 @@
     "node": "~0.6.10 || 0.8 || 0.9"
   },
   "dependencies": {
-    "coffee-script": "~1.6.3",
     "marked": "~0.2.9",
-    "highlight.js": "~7.3.0",
+    "highlight.js": "~7.4.0",
     "umd-wrapper": "~0.1.0"
   },
   "devDependencies": {
-    "mocha": "~1.13.0",
+    "coffee-script": "~1.6.3",
+    "mocha": "~1.14.0",
     "chai": "~1.8.0",
     "jsdom": "~0.8.6"
   }
