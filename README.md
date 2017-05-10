@@ -1,5 +1,7 @@
 ## markdown-brunch 1.7.1
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/jupl/markdown-brunch.svg)](https://greenkeeper.io/)
+
 [<img src="https://david-dm.org/jupl/markdown-brunch.png"/>](https://david-dm.org/jupl/markdown-brunch)
 [<img src="https://david-dm.org/jupl/markdown-brunch/dev-status.png"/>](https://david-dm.org/jupl/markdown-brunch#info=devDependencies)
 
