@@ -17,8 +17,8 @@
     "node": "~0.6.10 || 0.8 || 0.9"
   },
   "dependencies": {
-    "marked": "~0.2.9",
-    "highlight.js": "~7.4.0",
+    "marked": "~0.8.0",
+    "highlight.js": "^9.15.8",
     "umd-wrapper": "~0.1.0"
   },
   "devDependencies": {
